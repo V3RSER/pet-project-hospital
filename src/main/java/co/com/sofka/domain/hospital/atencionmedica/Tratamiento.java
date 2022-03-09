@@ -2,13 +2,13 @@ package co.com.sofka.domain.hospital.atencionmedica;
 
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofka.domain.hospital.atencionmedica.valor.Procedimiento;
-import co.com.sofka.domain.hospital.atencionmedica.valor.TratamientoId;
+import co.com.sofka.domain.hospital.atencionmedica.valor.IdTratamiento;
 
-public class Tratamiento extends Entity<TratamientoId> {
+public class Tratamiento extends Entity<IdTratamiento> {
     private final Procedimiento procedimiento;
 
-    public Tratamiento(TratamientoId tratamientoId, Procedimiento procedimiento) {
-        super(tratamientoId);
+    public Tratamiento(IdTratamiento idTratamiento, Procedimiento procedimiento) {
+        super(idTratamiento);
         this.procedimiento = procedimiento;
     }
 

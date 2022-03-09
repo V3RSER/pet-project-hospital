@@ -1,14 +1,14 @@
 package co.com.sofka.domain.hospital.paciente;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.domain.hospital.paciente.valor.AfiliacionId;
+import co.com.sofka.domain.hospital.paciente.valor.IdAfiliacion;
 import co.com.sofka.domain.hospital.paciente.valor.CaracteristicasAfiliacion;
 
-public class Afiliacion extends Entity<AfiliacionId> {
+public class Afiliacion extends Entity<IdAfiliacion> {
     private CaracteristicasAfiliacion caracteristicas;
 
-    public Afiliacion(AfiliacionId afiliacionId, CaracteristicasAfiliacion caracteristicasAfiliacion) {
-        super(afiliacionId);
+    public Afiliacion(IdAfiliacion idAfiliacion, CaracteristicasAfiliacion caracteristicasAfiliacion) {
+        super(idAfiliacion);
         this.caracteristicas = caracteristicasAfiliacion;
     }
 

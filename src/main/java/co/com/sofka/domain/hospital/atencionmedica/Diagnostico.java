@@ -1,14 +1,14 @@
 package co.com.sofka.domain.hospital.atencionmedica;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.domain.hospital.atencionmedica.valor.DiagnosticoId;
+import co.com.sofka.domain.hospital.atencionmedica.valor.IdDiagnostico;
 import co.com.sofka.domain.hospital.atencionmedica.valor.FormulaMedica;
 
-public class Diagnostico extends Entity<DiagnosticoId> {
+public class Diagnostico extends Entity<IdDiagnostico> {
     private final FormulaMedica formulaMedica;
 
-    public Diagnostico(DiagnosticoId diagnosticoId, FormulaMedica formulaMedica) {
-        super(diagnosticoId);
+    public Diagnostico(IdDiagnostico idDiagnostico, FormulaMedica formulaMedica) {
+        super(idDiagnostico);
         this.formulaMedica = formulaMedica;
     }
 
