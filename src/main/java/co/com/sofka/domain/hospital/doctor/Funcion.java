@@ -17,6 +17,7 @@ public class Funcion extends Entity<IdFuncion> {
     public void crearTipoDeFuncion(TipoDeFuncion tipoDeFuncion){
         this.tipoDeFuncion = tipoDeFuncion;
     }
+
     public void actualizarTipoDeFuncion(TipoDeFuncion tipoDeFuncion){
         this.tipoDeFuncion = Objects.requireNonNull(tipoDeFuncion);
     }

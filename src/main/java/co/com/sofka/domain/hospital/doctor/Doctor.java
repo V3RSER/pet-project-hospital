@@ -27,7 +27,5 @@ public class Doctor extends AggregateEvent<IdDoctor> {
     public void actualizarTipoDeFuncion(TipoDeFuncion tipoDeFuncion){
         appendChange(new TipoDeFuncionActualizada(tipoDeFuncion)).apply();
     }
-    public void crearTipoDeFuncion(TipoDeFuncion tipoDeFuncion){
-        appendChange(new TipoDeFuncionCreada(tipoDeFuncion)).apply();
-    }
+
 }
