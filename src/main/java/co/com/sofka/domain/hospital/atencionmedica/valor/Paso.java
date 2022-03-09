@@ -9,6 +9,10 @@ public class Paso implements ValueObject<String> {
 
     public Paso(String descripcion) {
         this.descripcion = Objects.requireNonNull(descripcion);
+
+        if (this.descripcion.isBlank()) {
+            throw new IllegalArgumentException("La descripcion no puede estar vacía");
+        }
     }
 
     @Override

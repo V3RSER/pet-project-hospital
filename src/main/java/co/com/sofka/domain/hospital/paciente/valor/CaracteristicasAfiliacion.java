@@ -11,6 +11,14 @@ public class CaracteristicasAfiliacion implements ValueObject<CaracteristicasAfi
     public CaracteristicasAfiliacion(String tipoAfiliacion, String cobertura) {
         this.tipoAfiliacion = Objects.requireNonNull(tipoAfiliacion);
         this.cobertura = Objects.requireNonNull(cobertura);
+
+        if (this.tipoAfiliacion.isBlank()) {
+            throw new IllegalArgumentException("El tipo de afiliación no puede estar vacío");
+        }
+
+        if (this.cobertura.isBlank()) {
+            throw new IllegalArgumentException("La cobertura no puede estar vacía");
+        }
     }
 
     @Override

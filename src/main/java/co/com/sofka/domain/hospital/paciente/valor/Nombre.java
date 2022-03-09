@@ -11,6 +11,22 @@ public class Nombre implements ValueObject<Nombre.Props> {
     public Nombre(String tipoAfiliacion, String cobertura) {
         this.nombre = Objects.requireNonNull(tipoAfiliacion);
         this.apellido = Objects.requireNonNull(cobertura);
+
+        if (this.nombre.isBlank()) {
+            throw new IllegalArgumentException("El nombre no puede estar vacío");
+        }
+
+        if (this.nombre.length() <= 5) {
+            throw new IllegalArgumentException("El nombre no puede ser tan corto");
+        }
+
+        if (this.apellido.isBlank()) {
+            throw new IllegalArgumentException("El apellido no puede estar vacío");
+        }
+
+        if (this.apellido.length() <= 5) {
+            throw new IllegalArgumentException("El apellido no puede ser tan corto");
+        }
     }
 
     @Override

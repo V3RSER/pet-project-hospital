@@ -14,6 +14,10 @@ public class Medicamento implements ValueObject<Medicamento.Props> {
         this.dosisGramos = Objects.requireNonNull(dosisGramos);
         this.intervaloHora = Objects.requireNonNull(intervaloHora);
 
+        if (this.nombre.isBlank()) {
+            throw new IllegalArgumentException("El nombre no puede estar vacío");
+        }
+
         if (this.dosisGramos <= 0) {
             throw new IllegalArgumentException("Debes ingresar una dosis en gramos válida");
         }
