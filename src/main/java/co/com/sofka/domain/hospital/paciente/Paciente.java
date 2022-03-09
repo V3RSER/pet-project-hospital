@@ -16,7 +16,7 @@ public class Paciente extends AggregateEvent<IdPaciente> {
         super(idPaciente);
         appendChange(new PacienteCreado(nombre)).apply();
     }
-    public void crearafiliacion(IdAfiliacion idAfiliacion, CaracteristicasAfiliacion caracteristicasAfiliacion){
+    public void crearAfiliacion(IdAfiliacion idAfiliacion, CaracteristicasAfiliacion caracteristicasAfiliacion){
         appendChange(new AfiliacionCreada(idAfiliacion,caracteristicasAfiliacion)).apply();
     }
 

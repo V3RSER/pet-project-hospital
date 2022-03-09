@@ -6,10 +6,8 @@ import co.com.sofka.domain.hospital.atencionmedica.valor.*;
 import co.com.sofka.domain.hospital.paciente.valor.IdPaciente;
 import co.com.sofka.domain.hospital.doctor.valor.IdDoctor;
 
-import java.util.List;
-
 public class AtencionMedica extends AggregateEvent<IdAtencionMedica> {
-    protected List<Urgencia> urgencias;
+    protected Urgencia urgencia;
     protected Diagnostico diagnostico;
     protected Tratamiento tratamiento;
     protected IdPaciente idPaciente;
@@ -32,7 +30,7 @@ public class AtencionMedica extends AggregateEvent<IdAtencionMedica> {
         appendChange(new UrgenciaAtendida(urgencia)).apply();
     }
 
-    public List<Urgencia> urgencias() {
-        return urgencias;
+    public Urgencia urgencia() {
+        return urgencia;
     }
 }
