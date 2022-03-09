@@ -1,9 +1,8 @@
 package co.com.sofka.domain.hospital.paciente;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.domain.hospital.doctor.valor.TipoDeFuncion;
-import co.com.sofka.domain.hospital.paciente.valor.IdAfiliacion;
 import co.com.sofka.domain.hospital.paciente.valor.CaracteristicasAfiliacion;
+import co.com.sofka.domain.hospital.paciente.valor.IdAfiliacion;
 
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public class Afiliacion extends Entity<IdAfiliacion> {
         return caracteristicasAfiliacion;
     }
 
-    public void actualizarCaracteristicasDeAfiliacion(CaracteristicasAfiliacion caracteristicasAfiliacion){
+    public void actualizarCaracteristicasDeAfiliacion(CaracteristicasAfiliacion caracteristicasAfiliacion) {
         this.caracteristicasAfiliacion = Objects.requireNonNull(caracteristicasAfiliacion);
     }
 }

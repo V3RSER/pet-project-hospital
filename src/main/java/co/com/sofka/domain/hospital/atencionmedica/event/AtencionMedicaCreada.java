@@ -8,10 +8,10 @@ public class AtencionMedicaCreada extends DomainEvent {
     private final IdPaciente idPaciente;
     private final IdDoctor idDoctor;
 
-    public AtencionMedicaCreada(IdPaciente idPaciente, IdDoctor idDoctor){
+    public AtencionMedicaCreada(IdPaciente idPaciente, IdDoctor idDoctor) {
         super("atencionmedica.atencionmedicacreada");
-        this.idPaciente=idPaciente;
-        this.idDoctor=idDoctor;
+        this.idPaciente = idPaciente;
+        this.idDoctor = idDoctor;
     }
 
     public IdPaciente getIdPaciente() {

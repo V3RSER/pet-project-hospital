@@ -15,16 +15,20 @@ public class Doctor extends AggregateEvent<IdDoctor> {
         super(entityId);
         appendChange(new DoctorCreado(nombre)).apply();
     }
-    public void asignarEnfermero(IdEnfermero entityId, Nombre nombre){
-        appendChange(new EnfermeroAsignado(entityId,nombre)).apply();
+
+    public void asignarEnfermero(IdEnfermero entityId, Nombre nombre) {
+        appendChange(new EnfermeroAsignado(entityId, nombre)).apply();
     }
-    public void crearFuncion(IdFuncion entityId, TipoDeFuncion tipoDeFuncion){
-        appendChange(new FuncionCreada(entityId,tipoDeFuncion)).apply();
+
+    public void crearFuncion(IdFuncion entityId, TipoDeFuncion tipoDeFuncion) {
+        appendChange(new FuncionCreada(entityId, tipoDeFuncion)).apply();
     }
-    public void actualizarNombreEnfermero(Nombre nombre){
+
+    public void actualizarNombreEnfermero(Nombre nombre) {
         appendChange(new NombreEnfermeroActualizado(nombre)).apply();
     }
-    public void actualizarTipoDeFuncion(TipoDeFuncion tipoDeFuncion){
+
+    public void actualizarTipoDeFuncion(TipoDeFuncion tipoDeFuncion) {
         appendChange(new TipoDeFuncionActualizada(tipoDeFuncion)).apply();
     }
 

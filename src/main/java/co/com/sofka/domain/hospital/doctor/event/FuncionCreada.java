@@ -8,10 +8,10 @@ public class FuncionCreada extends DomainEvent {
     private final IdFuncion idFuncion;
     private final TipoDeFuncion tipoDeFuncion;
 
-    public FuncionCreada(IdFuncion idFuncion, TipoDeFuncion tipoDeFuncion){
+    public FuncionCreada(IdFuncion idFuncion, TipoDeFuncion tipoDeFuncion) {
         super("doctor.funcioncreada");
-        this.idFuncion= idFuncion;
-        this.tipoDeFuncion=tipoDeFuncion;
+        this.idFuncion = idFuncion;
+        this.tipoDeFuncion = tipoDeFuncion;
     }
 
     public IdFuncion getIdFuncion() {

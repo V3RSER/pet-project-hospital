@@ -3,8 +3,8 @@ package co.com.sofka.domain.hospital.atencionmedica;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.hospital.atencionmedica.event.*;
 import co.com.sofka.domain.hospital.atencionmedica.valor.*;
-import co.com.sofka.domain.hospital.paciente.valor.IdPaciente;
 import co.com.sofka.domain.hospital.doctor.valor.IdDoctor;
+import co.com.sofka.domain.hospital.paciente.valor.IdPaciente;
 
 public class AtencionMedica extends AggregateEvent<IdAtencionMedica> {
     protected Urgencia urgencia;
@@ -13,20 +13,24 @@ public class AtencionMedica extends AggregateEvent<IdAtencionMedica> {
     protected IdPaciente idPaciente;
     protected IdDoctor idDoctor;
 
-    public AtencionMedica(IdAtencionMedica idAtencionMedica,IdDoctor idDoctor, IdPaciente idPaciente) {
+    public AtencionMedica(IdAtencionMedica idAtencionMedica, IdDoctor idDoctor, IdPaciente idPaciente) {
         super(idAtencionMedica);
-        appendChange(new AtencionMedicaCreada(idPaciente,idDoctor)).apply();
+        appendChange(new AtencionMedicaCreada(idPaciente, idDoctor)).apply();
     }
-    public void realizarDiagnostico(IdDiagnostico idDiagnostico, FormulaMedica formulaMedica){
-        appendChange(new DiagnosticoRealizado(idDiagnostico,formulaMedica)).apply();
+
+    public void realizarDiagnostico(IdDiagnostico idDiagnostico, FormulaMedica formulaMedica) {
+        appendChange(new DiagnosticoRealizado(idDiagnostico, formulaMedica)).apply();
     }
-    public void actualizarProcedimientoTratamiento(Procedimiento procedimiento){
+
+    public void actualizarProcedimientoTratamiento(Procedimiento procedimiento) {
         appendChange(new ProcedimientoTratamientoActualizado(procedimiento)).apply();
     }
-    public void generarTratamiento(IdTratamiento idTratamiento, Procedimiento procedimiento){
-        appendChange(new TratamientoGenerado(idTratamiento,procedimiento)).apply();
+
+    public void generarTratamiento(IdTratamiento idTratamiento, Procedimiento procedimiento) {
+        appendChange(new TratamientoGenerado(idTratamiento, procedimiento)).apply();
     }
-    public void atenderUrgencia(Urgencia urgencia){
+
+    public void atenderUrgencia(Urgencia urgencia) {
         appendChange(new UrgenciaAtendida(urgencia)).apply();
     }
 

@@ -11,9 +11,10 @@ public class Enfermero extends Entity {
 
     public Enfermero(IdEnfermero entityId, Nombre nombre) {
         super(entityId);
-        this.nombre=nombre;
+        this.nombre = nombre;
     }
-    public void actualizarNombre(Nombre nombre){
+
+    public void actualizarNombre(Nombre nombre) {
         this.nombre = Objects.requireNonNull(nombre);
     }
 }

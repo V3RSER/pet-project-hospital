@@ -1,9 +1,8 @@
 package co.com.sofka.domain.hospital.paciente;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.domain.hospital.paciente.valor.CaracteristicasAfiliacion;
-import co.com.sofka.domain.hospital.paciente.valor.IdCita;
 import co.com.sofka.domain.hospital.paciente.valor.Fecha;
+import co.com.sofka.domain.hospital.paciente.valor.IdCita;
 
 import java.util.Objects;
 
@@ -15,7 +14,7 @@ public class Cita extends Entity<IdCita> {
         this.fecha = fecha;
     }
 
-    public void actualizarFecha(Fecha fecha){
+    public void actualizarFecha(Fecha fecha) {
         this.fecha = Objects.requireNonNull(fecha);
     }
 

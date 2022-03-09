@@ -8,10 +8,10 @@ public class TratamientoGenerado extends DomainEvent {
     private final IdTratamiento idTratamiento;
     private final Procedimiento procedimiento;
 
-    public TratamientoGenerado(IdTratamiento idTratamiento, Procedimiento procedimiento){
+    public TratamientoGenerado(IdTratamiento idTratamiento, Procedimiento procedimiento) {
         super("atencionmedica.tratamientogenerado");
-        this.idTratamiento=idTratamiento;
-        this.procedimiento=procedimiento;
+        this.idTratamiento = idTratamiento;
+        this.procedimiento = procedimiento;
     }
 
     public IdTratamiento getIdTratamiento() {

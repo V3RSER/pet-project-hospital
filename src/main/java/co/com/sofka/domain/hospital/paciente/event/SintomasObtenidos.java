@@ -6,9 +6,9 @@ import co.com.sofka.domain.hospital.paciente.valor.Sintomas;
 public class SintomasObtenidos extends DomainEvent {
     private final Sintomas sintomas;
 
-    public SintomasObtenidos(Sintomas sintomas){
+    public SintomasObtenidos(Sintomas sintomas) {
         super("paciente.sintomasObtenidos");
-        this.sintomas=sintomas;
+        this.sintomas = sintomas;
     }
 
     public Sintomas getSintomas() {

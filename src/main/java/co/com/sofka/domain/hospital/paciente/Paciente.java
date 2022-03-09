@@ -16,29 +16,30 @@ public class Paciente extends AggregateEvent<IdPaciente> {
         super(idPaciente);
         appendChange(new PacienteCreado(nombre)).apply();
     }
-    public void crearAfiliacion(IdAfiliacion idAfiliacion, CaracteristicasAfiliacion caracteristicasAfiliacion){
-        appendChange(new AfiliacionCreada(idAfiliacion,caracteristicasAfiliacion)).apply();
+
+    public void crearAfiliacion(IdAfiliacion idAfiliacion, CaracteristicasAfiliacion caracteristicasAfiliacion) {
+        appendChange(new AfiliacionCreada(idAfiliacion, caracteristicasAfiliacion)).apply();
     }
 
-    public void actualizarCaracteristicasDeAfiliacion(CaracteristicasAfiliacion caracteristicasAfiliacion){
+    public void actualizarCaracteristicasDeAfiliacion(CaracteristicasAfiliacion caracteristicasAfiliacion) {
         appendChange(new CaracteristicasdeAfiliacionActualizadas(caracteristicasAfiliacion)).apply();
     }
-    public void atenderCita(IdCita idCita, Fecha fecha){
-        appendChange(new CitaAtendida(idCita,fecha)).apply();
+
+    public void atenderCita(IdCita idCita, Fecha fecha) {
+        appendChange(new CitaAtendida(idCita, fecha)).apply();
     }
 
-    public void actualizarFechaCita(Fecha fecha){
+    public void actualizarFechaCita(Fecha fecha) {
         appendChange(new FechaCitaActualizada(fecha)).apply();
     }
 
-    public void actualizarSintomas(Sintomas sintomas){
+    public void actualizarSintomas(Sintomas sintomas) {
         appendChange(new SintomasActualizados(sintomas)).apply();
     }
 
-    public void obtenerSintomas(Sintomas sintomas){
+    public void obtenerSintomas(Sintomas sintomas) {
         appendChange(new SintomasObtenidos(sintomas)).apply();
     }
-
 
 
     public Map<String, Cita> citas() {

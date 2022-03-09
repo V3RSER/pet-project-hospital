@@ -1,8 +1,8 @@
 package co.com.sofka.domain.hospital.atencionmedica;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofka.domain.hospital.atencionmedica.valor.Procedimiento;
 import co.com.sofka.domain.hospital.atencionmedica.valor.IdTratamiento;
+import co.com.sofka.domain.hospital.atencionmedica.valor.Procedimiento;
 
 public class Tratamiento extends Entity<IdTratamiento> {
     private final Procedimiento procedimiento;

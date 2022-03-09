@@ -8,9 +8,9 @@ public class DiagnosticoRealizado extends DomainEvent {
     private final IdDiagnostico idDiagnostico;
     private final FormulaMedica formulaMedica;
 
-    public DiagnosticoRealizado(IdDiagnostico idDiagnostico,FormulaMedica formulaMedica){
+    public DiagnosticoRealizado(IdDiagnostico idDiagnostico, FormulaMedica formulaMedica) {
         super("atencionmedica.diagnosticorealizado");
-        this.idDiagnostico=idDiagnostico;
-        this.formulaMedica=formulaMedica;
+        this.idDiagnostico = idDiagnostico;
+        this.formulaMedica = formulaMedica;
     }
 }

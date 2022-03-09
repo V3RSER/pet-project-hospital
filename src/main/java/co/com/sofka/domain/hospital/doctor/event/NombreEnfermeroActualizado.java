@@ -8,7 +8,7 @@ public class NombreEnfermeroActualizado extends DomainEvent {
 
     public NombreEnfermeroActualizado(Nombre nombre) {
         super("doctor.nombreenfermeroactualizado");
-        this.nombre=nombre;
+        this.nombre = nombre;
     }
 
     public Nombre getNombre() {

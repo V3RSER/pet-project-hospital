@@ -8,13 +8,17 @@ public class EnfermeroAsignado extends DomainEvent {
     private final IdEnfermero idEnfermero;
     private final Nombre nombre;
 
-    public EnfermeroAsignado(IdEnfermero idEnfermero, Nombre nombre){
+    public EnfermeroAsignado(IdEnfermero idEnfermero, Nombre nombre) {
         super("doctor.enfermeroasignado");
-        this.idEnfermero=idEnfermero;
-        this.nombre=nombre;
+        this.idEnfermero = idEnfermero;
+        this.nombre = nombre;
     }
 
-    public IdEnfermero getIdEnfermero(){return idEnfermero;}
+    public IdEnfermero getIdEnfermero() {
+        return idEnfermero;
+    }
 
-    public Nombre getNombre() {return nombre;}
+    public Nombre getNombre() {
+        return nombre;
+    }
 }

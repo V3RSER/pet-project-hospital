@@ -5,9 +5,10 @@ import co.com.sofka.domain.hospital.atencionmedica.valor.Urgencia;
 
 public class UrgenciaAtendida extends DomainEvent {
     private final Urgencia urgencia;
-    public UrgenciaAtendida(Urgencia urgencia){
+
+    public UrgenciaAtendida(Urgencia urgencia) {
         super("atencionmedica.urgenciaatendida");
-        this.urgencia=urgencia;
+        this.urgencia = urgencia;
     }
 
     public Urgencia getUrgencia() {

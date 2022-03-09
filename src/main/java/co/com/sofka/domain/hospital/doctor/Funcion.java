@@ -11,14 +11,14 @@ public class Funcion extends Entity<IdFuncion> {
 
     public Funcion(IdFuncion entityId, TipoDeFuncion tipoDeFuncion) {
         super(entityId);
-        this.tipoDeFuncion=tipoDeFuncion;
-    }
-
-    public void crearTipoDeFuncion(TipoDeFuncion tipoDeFuncion){
         this.tipoDeFuncion = tipoDeFuncion;
     }
 
-    public void actualizarTipoDeFuncion(TipoDeFuncion tipoDeFuncion){
+    public void crearTipoDeFuncion(TipoDeFuncion tipoDeFuncion) {
+        this.tipoDeFuncion = tipoDeFuncion;
+    }
+
+    public void actualizarTipoDeFuncion(TipoDeFuncion tipoDeFuncion) {
         this.tipoDeFuncion = Objects.requireNonNull(tipoDeFuncion);
     }
 

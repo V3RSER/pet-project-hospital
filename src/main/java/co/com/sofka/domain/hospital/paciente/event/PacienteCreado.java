@@ -6,9 +6,9 @@ import co.com.sofka.domain.hospital.paciente.valor.Nombre;
 public class PacienteCreado extends DomainEvent {
     private final Nombre nombre;
 
-    public PacienteCreado(Nombre nombre){
+    public PacienteCreado(Nombre nombre) {
         super("paciente.pacientecreado");
-        this.nombre=nombre;
+        this.nombre = nombre;
     }
 
     public Nombre getNombre() {
