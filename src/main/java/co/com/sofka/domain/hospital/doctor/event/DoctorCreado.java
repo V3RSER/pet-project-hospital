@@ -1,7 +1,7 @@
 package co.com.sofka.domain.hospital.doctor.event;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.domain.hospital.doctor.valor.Nombre;
+import co.com.sofka.domain.hospital.valor.Nombre;
 
 public class DoctorCreado extends DomainEvent {
     private final Nombre nombre;

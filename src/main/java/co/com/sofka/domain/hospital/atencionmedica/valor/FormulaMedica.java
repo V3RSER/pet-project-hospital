@@ -9,16 +9,16 @@ public class FormulaMedica implements ValueObject<FormulaMedica.Props> {
     private final String nivelUrgencia;
     private final List<Medicamento> medicamentos;
 
-    public FormulaMedica(String tipoAfiliacion, String cobertura, List<Medicamento> medicamentos) {
-        this.nivelUrgencia = Objects.requireNonNull(tipoAfiliacion);
-        this.medicamentos = Objects.requireNonNull(medicamentos);
+    public FormulaMedica(String nivelUrgencia, List<Medicamento> medicamentos) {
+        this.nivelUrgencia = Objects.requireNonNull(nivelUrgencia, "El nivel de urgencia no debe ser nulo");
+        this.medicamentos = Objects.requireNonNull(medicamentos, "los medicamentos no deben ser nulos");
     }
 
     @Override
     public Props value() {
         return new Props() {
             @Override
-            public String tipoAfiliacion() {
+            public String nivelUrgencia() {
                 return nivelUrgencia;
             }
 
@@ -30,7 +30,7 @@ public class FormulaMedica implements ValueObject<FormulaMedica.Props> {
     }
 
     public interface Props {
-        String tipoAfiliacion();
+        String nivelUrgencia();
 
         List<Medicamento> medicamentos();
     }

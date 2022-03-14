@@ -3,16 +3,16 @@ package co.com.sofka.domain.hospital.doctor.command;
 import co.com.sofka.domain.generic.Command;
 import co.com.sofka.domain.hospital.doctor.valor.IdDoctor;
 import co.com.sofka.domain.hospital.doctor.valor.IdEnfermero;
-import co.com.sofka.domain.hospital.paciente.valor.Nombre;
+import co.com.sofka.domain.hospital.valor.Nombre;
 
 public class AsignarEnfermero extends Command {
     private final IdDoctor idDoctor;
-    private final IdEnfermero entityId;
+    private final IdEnfermero idEnfermero;
     private final Nombre nombre;
 
-    public AsignarEnfermero(IdDoctor idDoctor, IdEnfermero entityId, Nombre nombre) {
+    public AsignarEnfermero(IdDoctor idDoctor, IdEnfermero idEnfermero, Nombre nombre) {
         this.idDoctor = idDoctor;
-        this.entityId = entityId;
+        this.idEnfermero = idEnfermero;
         this.nombre = nombre;
     }
 
@@ -21,7 +21,7 @@ public class AsignarEnfermero extends Command {
     }
 
     public IdEnfermero getEntityId() {
-        return entityId;
+        return idEnfermero;
     }
 
     public Nombre getNombre() {

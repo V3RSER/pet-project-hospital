@@ -17,4 +17,8 @@ public class AfiliacionCreada extends DomainEvent {
     public CaracteristicasAfiliacion getCaracteristicasAfiliacion() {
         return caracteristicasAfiliacion;
     }
+
+    public IdAfiliacion getIdAfiliacion() {
+        return idAfiliacion;
+    }
 }

@@ -10,4 +10,8 @@ public class CaracteristicasdeAfiliacionActualizadas extends DomainEvent {
         super("paciente.caracteristicaafiliacionactualizada");
         this.caracteristicasAfiliacion = caracteristicasAfiliacion;
     }
+
+    public CaracteristicasAfiliacion getCaracteristicasAfiliacion() {
+        return caracteristicasAfiliacion;
+    }
 }

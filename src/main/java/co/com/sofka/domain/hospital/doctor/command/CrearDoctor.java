@@ -2,7 +2,7 @@ package co.com.sofka.domain.hospital.doctor.command;
 
 import co.com.sofka.domain.generic.Command;
 import co.com.sofka.domain.hospital.doctor.valor.IdDoctor;
-import co.com.sofka.domain.hospital.doctor.valor.Nombre;
+import co.com.sofka.domain.hospital.valor.Nombre;
 
 public class CrearDoctor extends Command {
     private final IdDoctor idDoctor;

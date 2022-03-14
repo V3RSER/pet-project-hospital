@@ -2,7 +2,7 @@ package co.com.sofka.domain.hospital.paciente.command;
 
 import co.com.sofka.domain.generic.Command;
 import co.com.sofka.domain.hospital.paciente.valor.IdPaciente;
-import co.com.sofka.domain.hospital.paciente.valor.Nombre;
+import co.com.sofka.domain.hospital.valor.Nombre;
 
 public class CrearPaciente extends Command {
     private final IdPaciente idPaciente;
