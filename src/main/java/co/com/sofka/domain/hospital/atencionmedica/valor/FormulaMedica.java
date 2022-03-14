@@ -11,7 +11,7 @@ public class FormulaMedica implements ValueObject<FormulaMedica.Props> {
 
     public FormulaMedica(String nivelUrgencia, List<Medicamento> medicamentos) {
         this.nivelUrgencia = Objects.requireNonNull(nivelUrgencia, "El nivel de urgencia no debe ser nulo");
-        this.medicamentos = Objects.requireNonNull(medicamentos, "los medicamentos no deben ser nulos");
+        this.medicamentos = Objects.requireNonNull(medicamentos, "Los medicamentos no deben ser nulos");
     }
 
     @Override

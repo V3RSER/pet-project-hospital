@@ -22,12 +22,16 @@ public class AtencionMedica extends AggregateEvent<IdAtencionMedica> {
         appendChange(new DiagnosticoRealizado(idDiagnostico, formulaMedica)).apply();
     }
 
-    public void actualizarProcedimientoTratamiento(Procedimiento procedimiento) {
-        appendChange(new ProcedimientoTratamientoActualizado(procedimiento)).apply();
+    public void actualizarFormulaMedica(FormulaMedica formulaMedica) {
+        appendChange(new FormulaMedicaActualizada(formulaMedica)).apply();
     }
 
     public void generarTratamiento(IdTratamiento idTratamiento, Procedimiento procedimiento) {
         appendChange(new TratamientoGenerado(idTratamiento, procedimiento)).apply();
+    }
+
+    public void actualizarProcedimientoTratamiento(Procedimiento procedimiento) {
+        appendChange(new ProcedimientoTratamientoActualizado(procedimiento)).apply();
     }
 
     public void atenderUrgencia(Urgencia urgencia) {
@@ -36,5 +40,21 @@ public class AtencionMedica extends AggregateEvent<IdAtencionMedica> {
 
     public Urgencia urgencia() {
         return urgencia;
+    }
+
+    public Diagnostico diagnostico() {
+        return diagnostico;
+    }
+
+    public Tratamiento tratamiento() {
+        return tratamiento;
+    }
+
+    public IdPaciente idPaciente() {
+        return idPaciente;
+    }
+
+    public IdDoctor idDoctor() {
+        return idDoctor;
     }
 }

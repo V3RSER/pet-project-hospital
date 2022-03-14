@@ -13,4 +13,12 @@ public class DiagnosticoRealizado extends DomainEvent {
         this.idDiagnostico = idDiagnostico;
         this.formulaMedica = formulaMedica;
     }
+
+    public IdDiagnostico getIdDiagnostico() {
+        return idDiagnostico;
+    }
+
+    public FormulaMedica getFormulaMedica() {
+        return formulaMedica;
+    }
 }
